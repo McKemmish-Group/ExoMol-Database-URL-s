@@ -147,31 +147,7 @@ print('all file URL\'s have been obtained!')
 #Sets a variable to an empty array
 nofile = []
 
-#a for loop to go through all URLs and check if there is a file
-#URLs with no file are appended
-#replace list with whatever list you are downloading
 
-for x in #list: 
-    r1 = requests.get(x)
-    if str(r1) == '<Response [200]>':
-        nofile.append(x)
-    r1.status_code
-    200
- 
-    r1.status_code == requests.codes.ok
-    True
- 
-    requests.codes['temporary_redirect']
-    307
- 
-    requests.codes.teapot
-    418
- 
-    requests.codes['o/']
-    200
-
-for err404 in nofile:
-    list.remove(err404) #replace list with what list you are downloading e.g. NH3 for ammonia files
     
 #downloads the files into current working directory
 #all_URLs can and probably should be replaced with a speficic molecule/file URL list
@@ -180,4 +156,7 @@ for err404 in nofile:
 
 ##for x in all_URLs:
     ##file_name = x.split('/')[-1]
-    ##urllib.request.urlretrieve(x, file_name)
+    ##try:
+        ##urllib.request.urlretrieve(x, file_name)
+    ##except:
+        ##print('Failed to download', file_name)
